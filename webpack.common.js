@@ -29,8 +29,7 @@ module.exports = {
             //Sass Loaders
             {
                 test: /\.(sa|sc|c)ss$/,
-                use: [
-                    {
+                use: [{
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             // only enable hot in development
@@ -43,7 +42,7 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            plugins: function () {
+                            plugins: function() {
                                 return [
                                     require('precss'),
                                     require('autoprefixer')
@@ -56,14 +55,12 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            outputPath: 'images'
-                        }
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        outputPath: 'images'
                     }
-                ]
+                }]
             }
         ]
     },
