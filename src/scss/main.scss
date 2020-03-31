@@ -3,7 +3,10 @@ body {
 }
 
 blockquote {
-    font-size: 30px;
+    font-size: 22px;
+    @media screen and(min-width: 992px) {
+        font-size: 28px;
+    }
 }
 
 h3 {
